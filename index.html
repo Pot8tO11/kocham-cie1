@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynkowe zapytanie</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #FFC0CB; /* Różowe tło */
+        }
+
+        h1 {
+            color: #800080; /* Fioletowy kolor tekstu */
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        #yesBtn:hover, #noBtn:hover {
+            background-color: #FF69B4;
+            color: white;
+        }
+
+        #loveText {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #800080; /* Fioletowy kolor tekstu */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Czy zostaniesz moją walentynką 🥰😘?</h1>
+
+    <div id="message"> </div>
+
+    <div id="buttons">
+        <button id="yesBtn" class="button" onclick="showLoveText()">Tak</button>
+        <button id="noBtn" class="button" onclick="showYesMessage()">Nie</button>
+    </div>
+
+    <div id="loveText">
+        Kocham cię słońce najmocniej na świecie,<br>
+        Cieszę się, że jesteś i pamiętaj zawsze będę przy tobie ❤❤❤❤❤❤
+    </div>
+
+    <script>
+        function showYesMessage() {
+            document.getElementById('message').innerText = 'Tak, będę Twoją walentynką! 🥰😍';
+            document.getElementById('yesBtn').innerText = '🎉 Yay! 🎉';
+            document.getElementById('yesBtn').style.fontSize = '24px';
+            document.getElementById('noBtn').style.display = 'none';
+        }
+
+        function showLoveText() {
+            document.getElementById('message').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('loveText').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
